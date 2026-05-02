@@ -476,6 +476,10 @@
             background: #fa9ad5;
         }
 
+        .style {
+            width: 49%;
+        }
+
         @media only screen and (max-width: 960px) {
             .two-col {
                 flex-direction: column;
@@ -508,6 +512,9 @@
             .cputable {
                 width: 100%;
             }
+            .style {
+            width: 100%;
+        }
         }
     </style>
 </head>
@@ -572,6 +579,7 @@
 
                 <h3>Species Bonuses</h3>
                 <p>All folks skate, some skate different.</p>
+                    <div>
                 <table>
                     <tr>
                         <th>d6</th>
@@ -608,24 +616,10 @@
                         <td><strong>Human</strong></td>
                         <td><em>Well Rounded:</em> Assign 5 points instead of 4.</td>
                     </tr>
-                </table>
+                </table></div>
 
-                 <h3>Stance</h3>
-                <table>
-                    <tr>
-                        <th>d6</th>
-                        <th>Stance</th>
-                    </tr>
-                    <tr>
-                        <td>Even</td>
-                        <td>Regular</td>
-                    </tr>
-                    <tr>
-                        <td>Odd</td>
-                        <td>Goofy</td>
-                    </tr>
-                </table>
-                
+                <div class="feattables">
+                    <div class="style">
                 <h3>Style</h3>
                 <table>
                     <tr>
@@ -657,7 +651,9 @@
                         <td>Full adventuring leathers. Protective, practical, not intended for skating.</td>
                     </tr>
                 </table>
+                </div>
 
+                <div class="steez">
                 <h3>Steez</h3>
                 <table>
                     <tr>
@@ -689,6 +685,26 @@
                         <td>Chaos. Full send every time.</td>
                     </tr>
                 </table>
+                </div>
+                </div>
+
+                 <div class="stance">
+                 <h3>Stance</h3>
+                <table>
+                    <tr>
+                        <th>d6</th>
+                        <th>Stance</th>
+                    </tr>
+                    <tr>
+                        <td>Even</td>
+                        <td>Regular</td>
+                    </tr>
+                    <tr>
+                        <td>Odd</td>
+                        <td>Goofy</td>
+                    </tr>
+                </table>
+                </div>
 
                 <h3>Crew Name</h3>
                 <p>After all players create their skaters, come up with a crew name and name for the video.</p>
