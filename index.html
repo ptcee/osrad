@@ -754,16 +754,16 @@
             <div class="card yellow" id="dotricks">
                 <h2>Doing Tricks</h2>
                 <p>Before rolling, <strong>call your trick</strong>. State whether it's fakie or switch, a flip trick, grind, or combo. This determines which stats you use. Describe how you're performing the trick and on which feature.</p>
-                <p>All tricks <strong>start with a single base d6</strong>, then add your stat dice.</p>
+                <p>All tricks <strong>start with a single base d6</strong>; think of this as your actual board. Then add your stat dice; these represent your skill at doing specific types of tricks.</p>
+                <p>All tricks must <strong>end with a 4</strong>, unless fakie, which must end in a 4 then 1.</p>
                 <ol>
-                    <li><strong>Roll your dice pool.</strong> Start with a single d6. Add your stat dice from there.
+                    <li><strong><em>Roll your dice pool.</em></strong> Start with a single d6. Add your stat dice from there.
                     </li>
-                    <li><strong>Rerolls:</strong> You may Reroll your pool twice per trick. The number of dice that can be rerolled each time is equal to your TECH.</li>
-                    <li><strong>Pop your trick.</strong> After your first reroll, if you do not have a 4 you may change 1 die into a 4.</li>
-                    <li><strong>Arrange your dice into a sequence</strong> to build the trick. Unused dice are
-                        discarded.</li>
-                    <li><strong>If you cannot form a valid sequence</strong>, you bail. Tick the Kickout Clock. If your pool contains any 1s, you Slam. Lose 1 GNAR per 1 result.</li>
-                    <li><strong>If you land the trick</strong>, get some kudos (see KUDOS) and clip it!</li>
+                    <li><strong><em>Rerolls:</em></strong> You may Reroll your pool twice per trick. The number of dice that can be rerolled each time is equal to your TECH.</li>
+                    <li><strong><em>Arrange your dice into a sequence</em></strong> to build the trick.</li>
+                    <li><strong><em>Stomp your trick.</em></strong> After rerolling, if you do not have a 4 you may change 1 die into a 4. Discard all other unused dice.</li>
+                    <li><strong><em>If you cannot form a valid sequence</em></strong>, you bail. Tick the Kickout Clock. If your pool contains any 1s, you Slam. Lose 1 GNAR per 1 result.</li>
+                    <li><strong><em>If you land the trick</em></strong>, get some kudos (see KUDOS) and clip it!</li>
                 </ol>
             </div>
         </div>
@@ -783,9 +783,9 @@
                             <circle cx="5" cy="13" r="1.8" class="pd" />
                             <circle cx="13" cy="13" r="1.8" class="pd" />
                         </svg>
-                    </div> must always start your trick, unless you are skating switch.<br><br>
-                    Skaters can change a die result into a 4 after their first reroll if they do not roll
-                    a 4.</blockquote>
+                    </div> must always end your trick, unless you are skating fakie.<br><br>
+                    Skaters can change a die result into a 4 after using their rerolls if they do not roll
+                    a 4. This represents landing clean on the bolts.</blockquote>
 
                 <p>
                 <div class="die 1"><svg viewBox="0 0 18 18">
@@ -1468,12 +1468,27 @@
             <!-- THE SESSION ITSELF -->
             <div class="card green" id="session">
                 <h2>The Session</h2>
+                <h3 id="video">The Video Part</h3>
+
+                <p>You can always add a landed trick to your video part if you <em>have a free clip slot</em>. You can
+                    only have
+                    up to 5 clips in your part. You can swap old clips for new ones by <strong>using Kudos for
+                        B-Roll</strong>.</p>
+                <p><em>Clip it:</em> Add the trick to your Video Part. Record the spot, trick and score on
+                    your character sheet in an empty clip slot.</p>
+
+                <p>Each skater keeps a list of their landed tricks across the session. At the end of play, the group
+                    adds up the total points of all their clips. Whoever has the most points gets <strong>Last
+                        Part</strong>. Last Part means you are the raddest, you shred the hardest.
+                </p>
+
+
                 <h3 id="legspots">Legendary Spots</h3>
                 <p>Every spot has a Legend Track from 1 to 6. Roll a d6 and mark the starting Legend when skaters
                     arrive.</p>
 
-                <p>Every round, a sick nasty trick can build the spot’s notoriety.
-</p>
+                <p>Every round, a sick nasty trick can build the spot's notoriety.
+                </p>
                 <p><em>Lock it Down:</em> The first 4+ point trick each round ticks the Legend Track +1.</p>
 
                 <table>
@@ -1502,19 +1517,6 @@
                 <p>If the Legend Track <strong>hits 6 while you're there</strong>, a Local Legend shows up and
                     challenges the crew.</p>
 
-                <h3 id="video">The Video Part</h3>
-
-                <p>You can always add a landed trick to your video part if you <em>have a free clip slot</em>. You can
-                    only have
-                    up to 5 clips in your part. You can swap old clips for new ones by <strong>using Kudos for
-                        B-Roll</strong>.</p>
-                <p><em>Clip it:</em> Add the trick to your Video Part. Record the spot, trick and score on
-                    your character sheet in an empty clip slot.</p>
-
-                <p>Each skater keeps a list of their landed tricks across the session. At the end of play, the group
-                    adds up the total points of all their clips. Whoever has the most points gets <strong>Last
-                        Part</strong>. Last Part means you are the raddest, you shred the hardest.
-                </p>
 
                 <h3 id="sk8">Playing S.K.8.</h3>
                 <p>The first skater calls and attempts a trick on a specific feature. <em>Local Legends always go
@@ -2700,6 +2702,20 @@
     </div>
 
     <div class="sheet-ref">
+
+        <div class="col">
+        <div class="pre">
+        <h3>Designer Notes</h3>
+        <p>The idea behind building a dice sequence to perform tricks is based on how the pips of each die face look, and each die represents the action of the board.</p>
+
+        <p>The pips of a 4 look like the bolts on the top of a skateboard and represent landing your trick clean. The most stable place to land on a skateboard is right on top of the bolts.</p> 
+        <p>With flip tricks, the pips on a 3 are the board making a small rotation while the pips on a 5 are a larger rotation. The pips on a two show the board flipping over, two pips representing two wheels, the pips on a 6 represent the board flipping over the other direction.</p>
+
+        <p>With grinds, the pips are a general idea of the contact on the surface. A 6 for a 50-50 because both trucks, effectively the length of the board are on the rail or ledge. A 2 for 5-0 because only one truck, 2 wheels, are in contact. A 3 or a 5 for sliding along the board itself ties back into how 3 and 5 represent board rotation. To achieve a boardslide you have to ollie and rotate onto the rail.</p>
+
+        <p>While not all dice combinations line up perfectly with this logic, a little creativity will help you visualize how the dice sequence represents how your board is actually moving.</p>
+        </div>
+    </div>
     <div class="icon">
     <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 279.7 285.1" width="50px">
                 <g id="Layer_1-2" data-name="Layer 1">
