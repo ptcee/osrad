@@ -355,6 +355,23 @@
             gap: 10px;
         }
 
+        .ftype {
+            display: inline-block;
+            font-size: 9px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            padding: 1px 5px;
+            border-radius: 3px;
+            white-space: nowrap;
+        }
+
+        .ftype.gap        { background: #fcc1d0; color: #8a1549; }
+        .ftype.grind      { background: #dbedf7; color: #0077a0; }
+        .ftype.nothing    { background: #dff2e1; color: #2a7a3a; }
+        .ftype.transition { background: #f5f0cc; color: #7a6010; }
+        .ftype.elevated   { background: #ede0f7; color: #6a1aaa; }
+        .ftype.longline   { background: #fde8d0; color: #a04010; }
+
         .note {
             font-size: 10px;
             color: #666;
@@ -736,7 +753,7 @@
 
             <div class="card yellow" id="dotricks">
                 <h2>Doing Tricks</h2>
-                <p>Before rolling, <strong>call your trick</strong>. State whether it's nollie or switch, a flip trick, grind, or combo. This determines which stats you use. Describe how you're performing the trick and on which feature.</p>
+                <p>Before rolling, <strong>call your trick</strong>. State whether it's fakie or switch, a flip trick, grind, or combo. This determines which stats you use. Describe how you're performing the trick and on which feature.</p>
                 <p>All tricks <strong>start with a single base d6</strong>, then add your stat dice.</p>
                 <ol>
                     <li><strong>Roll your dice pool.</strong> Start with a single d6. Add your stat dice from there.
@@ -774,7 +791,7 @@
                 <div class="die 1"><svg viewBox="0 0 18 18">
                         <circle cx="9" cy="9" r="1.8" class="pd" />
                     </svg></div> is a modifier die. Placed at the start it means <em>switch</em>. Placed at the
-                end it means <em>nollie</em>.</p>
+                end it means <em>fakie</em>.</p>
 
                 <div class="pre">
                     <p>
@@ -831,7 +848,7 @@
                             <circle cx="9" cy="9" r="1.8" class="pd" />
                         </svg>
                     </div>
-                    - nollie kickflip
+                    - fakie kickflip
                     </p>
                 </div>
 
@@ -1100,37 +1117,42 @@
                     streets and alleys. A spot is made up of a number of features you can do tricks on.</p>
 
                 <h3>Building a Spot</h3>
-                <p>Roll 3d6 +1 for each player and push them together on the table. Each die value
-                    determines the type of area
-                    and where it can sit.</p>
+                <p>Roll 3d6 +1 for each player and push them together on the table. Each die determines where it can sit and how it's connected to the features around it.</p>
                 <table>
                     <tr>
                         <th>Die</th>
-                        <th>Area Type</th>
+                        <th>Feature Type</th>
+                        <th>Note</th>
                     </tr>
                     <tr>
                         <td>1</td>
-                        <td>Back Alley - touches no more than 1 other area</td>
+                        <td><span class="ftype gap">Gap</span></td>
+                        <td>Touches no more than 1 other area</td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>Street Block - touches no more than 2 areas</td>
+                        <td><span class="ftype grind">Grind</span></td>
+                        <td>Touches no more than 2 areas</td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td>Ward Junction - touches no more than 3 areas</td>
+                        <td><span class="ftype nothing">Nothing Special</span></td>
+                        <td>Touches no more than 3 areas</td>
                     </tr>
                     <tr>
                         <td>4</td>
-                        <td>Market Square - can touch up to 4 areas</td>
+                        <td><span class="ftype transition">Transition</span></td>
+                        <td>Can touch up to 4 areas</td>
                     </tr>
                     <tr>
                         <td>5</td>
-                        <td>City Gate - stack all 5s together, must touch at least 2 areas</td>
+                        <td><span class="ftype elevated">Elevated Spot</span></td>
+                        <td>Stack all 5s together, must touch at least 2 areas</td>
                     </tr>
                     <tr>
                         <td>6</td>
-                        <td>Noble Ward - merge all 6s in a line, can touch up to 4 areas</td>
+                        <td><span class="ftype longline">Long Line</span></td>
+                        <td>Merge all 6s in a line, can touch up to 4 areas</td>
                     </tr>
                 </table>
 
@@ -1161,32 +1183,32 @@
                             </tr>
                             <tr>
                                 <td>4</td>
-                                <td>Merchant Crate</td>
+                                <td>Merchant Crate Stack</td>
                                 <td>-</td>
                             </tr>
                             <tr>
                                 <td>5</td>
-                                <td>Cracked Flagstone Step</td>
+                                <td>Cracked Flagstone Steps</td>
                                 <td>-</td>
                             </tr>
                             <tr>
                                 <td>6</td>
-                                <td>Market Statue Block</td>
+                                <td>Market Fountain Ledge</td>
                                 <td>Technical</td>
                             </tr>
                             <tr>
                                 <td>7</td>
-                                <td>Tavern Bench</td>
+                                <td>Tavern Benches</td>
                                 <td>-</td>
                             </tr>
                             <tr>
                                 <td>8</td>
-                                <td>Manual Slab</td>
+                                <td>Marble Manual Slab</td>
                                 <td>-</td>
                             </tr>
                             <tr>
                                 <td>9</td>
-                                <td>Barrel Kicker</td>
+                                <td>Broken Cart Kicker</td>
                                 <td>-</td>
                             </tr>
                             <tr>
@@ -1196,7 +1218,7 @@
                             </tr>
                             <tr>
                                 <td>11</td>
-                                <td>Iron Rail</td>
+                                <td>Straight Iron Rail</td>
                                 <td>-</td>
                             </tr>
                             <tr>
@@ -1211,7 +1233,7 @@
                             </tr>
                             <tr>
                                 <td>14</td>
-                                <td>Smithy Ledge</td>
+                                <td>Blacksmith Ledges</td>
                                 <td>Technical</td>
                             </tr>
                         </table>
@@ -1231,12 +1253,12 @@
                             </tr>
                             <tr>
                                 <td>16</td>
-                                <td>8 Stair Set</td>
+                                <td>Ten Stair Set</td>
                                 <td>-</td>
                             </tr>
                             <tr>
                                 <td>17</td>
-                                <td>Aqueduct Bank</td>
+                                <td>Dockside Loading Ramp</td>
                                 <td>-</td>
                             </tr>
                             <tr>
@@ -1251,33 +1273,33 @@
                             </tr>
                             <tr>
                                 <td>20</td>
-                                <td>30ft Long Tower Handrail</td>
-                                <td>Gnarly &amp; Technical</td>
+                                <td>Curved Handrail</td>
+                                <td>Technical</td>
                             </tr>
                             <tr>
                                 <td>21</td>
-                                <td>18ft Roof Drop</td>
-                                <td>-</td>
+                                <td>Two Storey Roof Drop</td>
+                                <td>Gnarly</td>
                             </tr>
                             <tr>
                                 <td>22-24</td>
-                                <td>City Gate Triple Kinked Rail</td>
-                                <td>Double Technical</td>
+                                <td>City Gate Kinked Rail</td>
+                                <td>Gnarly &amp; Technical</td>
                             </tr>
                             <tr>
                                 <td>25-27</td>
-                                <td>Temple Row 48 Stair</td>
+                                <td>Temple Stair Flat Stair</td>
                                 <td>Double Gnarly</td>
                             </tr>
                             <tr>
                                 <td>28-30</td>
-                                <td>The Warrens Gap</td>
+                                <td>Park Grass Gap</td>
                                 <td>-</td>
                             </tr>
                             <tr>
                                 <td>31-33</td>
-                                <td>Pale Ward Gate Rail</td>
-                                <td>Technical</td>
+                                <td>Noble's Double Kinked Rail</td>
+                                <td>Double Technical</td>
                             </tr>
                             <tr>
                                 <td>34+</td>
@@ -1383,7 +1405,7 @@
                 <h3>Visual Example</h3>
                 <img src="spot-ex.png" alt="six sided dice lined up to form a cluster">
                 <blockquote>
-                    <p><strong>Lil' side note: Seeing the Spot as a place.</strong> When the dice hit the table you're
+                    <p><strong>Seeing the Spot as a place.</strong> When the dice hit the table you're
                         not looking at a stat block. You're looking at a street corner, a market approach, a ruined ward
                         alley. Read it like a skater would: where's the entry, where's the exit, what's the natural
                         line? A Barrel Kicker next to a Stone Hubba next to a Gutter Gap isn't three separate features,
@@ -1395,7 +1417,7 @@
 
                     <p>Describe the place first, then how you're hucking your trick. "There's a long marble ledge
                         running the full length of a shuttered guild hall over a gutter gap along the docks road, I'm
-                        going to nollie noseblunt the ledge, heelflip out over the gap."</p>
+                        going to fakie noseblunt the ledge, heelflip out over the gap."</p>
 
                 </blockquote>
             </div>
@@ -1721,7 +1743,7 @@
                     </tr>
                     <tr>
                         <td>4</td>
-                        <td>Nollie shuv, casual, almost dismissive.</td>
+                        <td>fakie shuv, casual, almost dismissive.</td>
                     </tr>
                     <tr>
                         <td>5</td>
@@ -1757,7 +1779,7 @@
                     </tr>
                     <tr>
                         <td>13</td>
-                        <td>Nollie big spin, done so smooth it looks like warm up.</td>
+                        <td>fakie big spin, done so smooth it looks like warm up.</td>
                     </tr>
                     <tr>
                         <td>14</td>
@@ -1882,7 +1904,7 @@
                 <li><strong>d8</strong> - specific trick from that list. *(or d4/d20)</li>
                 <li><strong>d4</strong> - on a 4, the trick is modified
                     <ul>
-                        <li>odd d6 = switch, even d6 = nollie.</li>
+                        <li>odd d6 = switch, even d6 = fakie.</li>
                         <li>On 1-3, ignore the d4.</li>
                     </ul>
                 </li>
@@ -1970,7 +1992,7 @@
                 </div>
 
                 <div class="col cputable2">
-                    <h3>Switch / Nollie</h3>
+                    <h3>Switch / fakie</h3>
                     <p class="note">
                         Only applies when d4 = 4.
                     </p>
@@ -1985,7 +2007,7 @@
                         </tr>
                         <tr>
                             <td>Even</td>
-                            <td>Nollie</td>
+                            <td>fakie</td>
                         </tr>
                     </table>
                 </div>
